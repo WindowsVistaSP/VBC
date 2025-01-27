@@ -23,26 +23,115 @@
 <div id="main">
     <h1><br>欢迎来到Vista Builds Collection</br></h>
   <hr>
+    <h2>序言</h>
   <ol>
     <li>这个网站是专门用来收集WindowsVista重置后版本的工具以及镜像的，如果您有什么好的建议或者发现网站里的内容和连接有问题可以在B站私信我<a href="https://space.bilibili.com/3493289055488901">（B站网名：WindowsVistaSP）</a></li>
   </ol>
  
   <hr>
-  <h2>在安装Windows Vista 重置后版本之前您可能需要做好以下准备</h2>
+  <h2>在安装Windows Vista 重置后版本之前您可能需要做好以下准备</h>
   <ol>
-    <li>请事先准备好驱动、镜像、激活工具，有的版本可能需要提前准备好PE系统（在不同的版本下即使你使用同样的环境，所使用的工具、驱动等都有可能不同）
-    <li>一定要在充分了解该版本的详细信息（比如时间炸弹、密钥）后再去安装，建议浏览<a href="https://betawiki.net/wiki/Main_Page">betawiki</a>或者<a href="https://www.betaworld.cn/%E9%A6%96%E9%A1%B5">betaworld</a>
-<li>安装前如果硬盘内有重要文件一定要备份！！！安装系统是需要格式化磁盘的！！！
+    <li>请事先准备好驱动、镜像、激活工具，有的版本可能需要提前准备好PE系统（在不同的版本下即使你使用同样的环境，所使用的工具、驱动等都有可能不同）</li>
+    <li>一定要在充分了解该版本的详细信息（比如时间炸弹、密钥）后再去安装，建议浏览<a href="https://betawiki.net/wiki/Main_Page">betawiki</a>或者<a href="https://www.betaworld.cn/%E9%A6%96%E9%A1%B5">betaworld</a></li>
+<li>安装前如果硬盘内有重要文件一定要备份！！！安装系统是需要格式化磁盘的！！！</li>
     </ol>
     <hr>
-  <h2>如果你想在VMware上安装Windows Vista 重置后版本您需要注意</h2>
+  <h2>如果你想在VMware上安装Windows Vista 重置后版本您需要注意</h>
 <ol>
-  <li>PC端VMware建议使用VMware7-10之间的版本，版本太高或者太低都可能出现不兼容的情况
-    <li>创建虚拟机时建议将兼容性调到VMware 6.5-7.x（除了某些强制要求的版本除外，比如如果您想在Intel CPU上安装5231.x的版本时要将兼容性调到VMware 5.x，否则会蓝屏）
-      <li>创建虚拟机时5270以前的版本建议使用Windows xp的默认配置（x64版本要用Windows xp x64Edition），5270以后的版本建议使用Windows Vista的默认配置（x64版本要用Windows Vista x64Edition）
-    <li>在进行自己不确定的操作时一定要将虚拟机文件备份
-      <li>虚拟机不用时可以选择待机而不是关机，这样下一次使用时可以防止时间炸弹爆炸（如果你使用了激活+拆弹工具并成功的话可以无视这一条）
+  <li>PC端VMware建议使用VMware7-10之间的版本，版本太高或者太低都可能出现不兼容的情况</li>
+    <li>50xx-52xx之间的版本建议使用xpdm的显卡驱动，53xx-6000之间的版本建议使用wddm的显卡驱动</li>
+    <li>创建虚拟机时建议将兼容性调到VMware 6.5-7.x（除了某些强制要求的版本除外，比如如果您想在Intel CPU上安装5231.x的版本时要将兼容性调到VMware 5.x，否则会蓝屏）</li>
+      <li>创建虚拟机时5270以前的版本建议使用Windows xp的默认配置（x64版本要用Windows xp x64Edition），5270以后的版本建议使用Windows Vista的默认配置（x64版本要用Windows Vista x64Edition）</li>
+    <li>在进行自己不确定的操作时一定要将虚拟机文件备份</li>
+      <li>虚拟机不用时可以选择待机而不是关机，这样下一次使用时可以防止时间炸弹爆炸（如果你使用了激活+拆弹工具并成功的话可以无视这一条）</li>
 </ol>
+    <hr>
+    <h2>如何在VMware中开启Windows Vista重置后版本的Aero</h>
+    <h3>5000-5001</h>
+    <ol>
+        <li>别想啦，这俩版本还没有加入Aero呢</li>
+    </ol>
+    <h3>5048</h>
+    <ol>
+        <li>1.安装xpdm的显卡驱动<a href="https://www.123684.com/s/n11cVv-cFRH">下载链接</a></li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DWM]</li>
+        <li>"EnableMachineCheck"=dword:00000000</li>
+        <li>如果你想要实现其他效果可以<a href="5048.html">点击这里</a></li>
+    </ol>
+    <h3>5098-5112</h>
+    <ol>
+        <li>1.安装xpdm的显卡驱动<a href="https://www.123684.com/s/n11cVv-cFRH">下载链接</a></li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DWM]</li>
+        <li>"EnableMachineCheck"=dword:00000000</li>
+        <li>3.进PE系统（建议使用Win10PE）将原C:\Windows\System32目下的uxss.exe替换掉（如有保护可以先用管理员权限删除再复制）</li>
+        <li><a href="https://www.123684.com/s/n11cVv-cFRH">PE下载链接</a></li>
+        <li><a href="https://www.123684.com/s/n11cVv-VFRH">5098uxss.exe下载链接</a></li>
+        <li><a href="https://www.123684.com/s/n11cVv-yFRH">5112uxss.exe下载链接</a></li>
+    </ol>
+        <h3>5212-5219</h>
+    <ol>
+        <li>1.安装xpdm的显卡驱动<a href="https://www.123684.com/s/n11cVv-cFRH">下载链接</a></li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DWM]</li>
+        <li>"EnableMachineCheck"=dword:00000000</li>
+    </ol>
+        <h3>5231</h>
+    <ol>
+        <li>1.安装xpdm的显卡驱动<a href="https://www.123684.com/s/n11cVv-cFRH">下载链接</a></li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DWM]</li>
+        <li>"EnableMachineCheck"=dword:00000000</li>
+        <li>3.按下Ctrl+Shift+F9关闭Aero，打开设备管理器，将显卡驱动卸载并重启</li>
+        <li>4.重启之后再次按下Ctrl+Shift+F9关闭Aero，等到右下角弹出显卡驱动已重新安装的提示时打开调整屏幕分辨率的窗口</li>
+        <li>5.将分辨率调的更大一点，然后将鼠标移动到“OK”按钮上（先千万别点那个按钮）</li>
+        <li>6.再次按下Ctrl+Shift+F9开启Aero，然后点击“OK”按钮即可</li>
+    </ol>
+            <h3>5259</h>
+    <ol>
+        <li>1.安装xpdm的显卡驱动<a href="https://www.123684.com/s/n11cVv-cFRH">下载链接</a></li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_CURRENT_USER\Software\Microsoft\DWM]</li>
+        <li>"UseMachineCheck"=dword:00000000</li>
+        <li>3.按下Ctrl+Shift+F9关闭Aero，打开设备管理器，将显卡驱动卸载并重启</li>
+        <li>4.重启之后再次按下Ctrl+Shift+F9关闭Aero，等到右下角弹出显卡驱动已重新安装的提示时打开调整屏幕分辨率的窗口</li>
+        <li>5.将分辨率调的更大一点，然后将鼠标移动到“OK”按钮上（先千万别点那个按钮）</li>
+        <li>6.再次按下Ctrl+Shift+F9开启Aero，然后点击“OK”按钮即可</li>
+    </ol>
+                <h3>5270-5284</h>
+    <ol>
+        <li>1.安装xpdm的显卡驱动<a href="https://www.123684.com/s/n11cVv-cFRH">下载链接</a></li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_CURRENT_USER\Software\Microsoft\DWM]</li>
+        <li>"UseMachineCheck"=dword:00000000</li>
+    </ol>
+                <h3>5308-5337</h>
+    <ol>
+        <li>目前无解</li>
+    </ol>
+                <h3>5342-5371（存疑）</h>
+    <ol>
+        <li>1.安装wddm的显卡驱动<a href="https://www.123684.com/s/n11cVv-bYRH">下载链接</a></li>
+        <li>2.进PE系统（建议使用Win10PE）将原C:\Windows\System32目下的msvcrt.dll替换为5378的（如有保护可以先用管理员权限删除再复制）</li>
+        <li><a href="https://www.123684.com/s/n11cVv-cFRH">PE下载链接</a></li>
+        <li><a href="  https://wwsv.lanzoul.com/ihclc2m10iji">5378的msvcrt.dll下载</a>（密码：18ev） </li>
+    </ol>
+                    <h3>5378-6000</h>
+    <ol>
+        <li>1.安装wddm的显卡驱动<a href="https://www.123684.com/s/n11cVv-bYRH">下载链接</a></li>
+        <li>2.进PE系统（建议使用Win10PE）将原C:\Windows\System32目下的msvcrt.dll替换为5378的（如有保护可以先用管理员权限删除再复制）</li>
+        <li>2.导入以下注册表</li>
+        <li>Windows Registry Editor Version 5.00</li>
+        <li>[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]</li>
+        <li>"CompositionPolicy"=dword:00000002</li>
+    </ol>
 </div>
 </div>
 </body>
