@@ -57,3 +57,10 @@ color: black;
 td, th { 
     border: 1px solid black;
   }
+
+ol {
+  font-size: 16px;
+}
+li {
+  margin-bottom: 5px;
+}
