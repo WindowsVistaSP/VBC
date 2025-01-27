@@ -21,7 +21,12 @@ background-image: url("topC.jpg");
 width:1000px;
 height:200px;
 }
-
+ol {
+  font-size: 16px;
+}
+li {
+  margin-bottom: 5px;
+}
 
 nav a{
 text-decoration:none;
