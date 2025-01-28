@@ -34,6 +34,7 @@ font-weight:bold;
 nav a:hover{
 color:#5EFFDE;
 }
+
 .dangqian{
 color:#AEAEAE;
 }
@@ -42,6 +43,12 @@ width:980px;
 margin:0 auto;
 background-color:#333333CC;
 padding: 10px;
+}
+#main a{
+color:#00FFFF;
+}
+#main a:visited{
+color:#D69AFE;
 }
 .navbar{
   background-image: url("navbarG.jpg");
