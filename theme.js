@@ -2,7 +2,13 @@ function changeTheme(theme) {
     const themePaths = {
         'themeA': 'themeA.css',
         'themeB': 'themeB.css',
-        'themeC': 'themeC.css'
+        'themeC': 'themeC.css',
+        'themeD': 'themeD.css',
+        'themeE': 'themeE.css',
+        'themeF': 'themeF.css',
+        'themeG': 'themeG.css',
+        'themeH': 'themeH.css',
+        'themeI': 'themeI.css',
     };
     const themeLink = document.getElementById('theme-link');
     themeLink.href = themePaths[theme];

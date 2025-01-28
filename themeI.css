@@ -4,20 +4,14 @@ padding:0px;
 list-style:none;
 }
 body {
-  background-image: url("backgroundB.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; 
-  height: 100vh; 
-  margin: 0;
+  background-color:#FFFFFF
 }
 #all{
 width:1000px;
 margin:0 auto;
 }
 #top{
-background-image: url("topB.jpg");
+background-image: url("topH.jpg");
 width:1000px;
 height:200px;
 }
@@ -40,17 +34,17 @@ color:#AEAEAE;
 #main{
 width:980px;
 margin:0 auto;
-background-color:#0099FFCC;
+background-color:#CCCCCCCC;
 padding: 10px;
 }
 .navbar{
-  background-image: url("navbarB.jpg");
+background-color:#CCCCCC;
 width:1000px;
 height:30px;
 
 }
    table {
-background: green;
+background: grey;
 color: black;
     border-collapse: collapse;
   }

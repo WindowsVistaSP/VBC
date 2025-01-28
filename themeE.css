@@ -4,7 +4,7 @@ padding:0px;
 list-style:none;
 }
 body {
-  background-image: url("backgroundB.jpg");
+  background-image: url("backgroundE.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ width:1000px;
 margin:0 auto;
 }
 #top{
-background-image: url("topB.jpg");
+background-image: url("topE.jpg");
 width:1000px;
 height:200px;
 }
@@ -40,17 +40,17 @@ color:#AEAEAE;
 #main{
 width:980px;
 margin:0 auto;
-background-color:#0099FFCC;
+background-color:#FF0000CC;
 padding: 10px;
 }
 .navbar{
-  background-image: url("navbarB.jpg");
+  background-image: url("navbarE.jpg");
 width:1000px;
 height:30px;
 
 }
    table {
-background: green;
+background: lightred;
 color: black;
     border-collapse: collapse;
   }
