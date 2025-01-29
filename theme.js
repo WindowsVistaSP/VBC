@@ -22,6 +22,6 @@ window.onload = function() {
         const theme = cookies.split('=')[1];
         changeTheme(theme); 
     } else { 
-        changeTheme('themeA'); 
+        changeTheme('themeI'); 
     }
 };
