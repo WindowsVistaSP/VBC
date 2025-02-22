@@ -3,12 +3,6 @@ function changeTheme(theme) {
         'themeA': 'themeA.css',
         'themeB': 'themeB.css',
         'themeC': 'themeC.css',
-        'themeD': 'themeD.css',
-        'themeE': 'themeE.css',
-        'themeF': 'themeF.css',
-        'themeG': 'themeG.css',
-        'themeH': 'themeH.css',
-        'themeI': 'themeI.css',
     };
     const themeLink = document.getElementById('theme-link');
     themeLink.href = themePaths[theme];
@@ -22,6 +16,6 @@ window.onload = function() {
         const theme = cookies.split('=')[1];
         changeTheme(theme); 
     } else { 
-        changeTheme('themeI'); 
+        changeTheme('themeA'); 
     }
 };
